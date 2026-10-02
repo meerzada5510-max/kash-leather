@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KASH Leather International</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120806;--panel:#2a120d;--ink:#f6ece0;--mute:#c4ad94;--gold:#e6b650;--line:#5a2a1e;--leather:#8b3a22;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -100px,#5a1f12 0,transparent 70%),repeating-linear-gradient(45deg,#ffffff06 0 2px,transparent 2px 6px),var(--bg);color:var(--ink);font:18px/1.65 "Source Serif 4",Georgia,serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:900;line-height:.95;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:14px}
+nav b{font:900 26px "Big Shoulders Display",Impact,sans-serif;letter-spacing:.02em}
+nav b i{font-style:normal;color:var(--gold)}
+nav div{display:flex;gap:20px;font-size:16px}
+nav a{text-decoration:none;color:var(--mute)}
+.btn{display:inline-block;background:linear-gradient(180deg,#f3cb6b,#d49a2e);box-shadow:0 6px 18px #e6b65033;color:#2a1507;padding:14px 26px;border-radius:4px;font:600 17px "Source Serif 4",Georgia,serif;text-decoration:none;border:0;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--gold)}
+.hero{text-align:center;padding:34px 0 10px}
+.hero h1{font-size:clamp(60px,12vw,140px);background:linear-gradient(180deg,#fff2c9,#e6b650 55%,#9a6a1c);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 18px #000a)}
+.hero h1 span{display:block;font-size:.34em;letter-spacing:.3em;-webkit-text-fill-color:var(--ink);margin-top:10px}
+.hero p{max-width:46ch;margin:22px auto 26px;color:var(--mute)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* 3D ring */
+.stage{perspective:1100px;height:340px;margin:30px auto 0;position:relative;overflow:hidden}
+.ring{--w:170px;--r:250px;position:absolute;left:50%;top:50px;width:var(--w);height:230px;margin-left:calc(var(--w)/-2);transform-style:preserve-3d;animation:spin 26s linear infinite}
+.stage:hover .ring{animation-play-state:paused}
+.face{position:absolute;inset:0;border-radius:10px;background:linear-gradient(160deg,#a8512c,#4a1a0e 70%);border:1px solid #e6b650;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:inset 0 0 0 6px #4a2616,inset 0 0 0 7px #e0b45a99}
+.face svg{width:84px;height:84px}
+.face b{font:900 24px "Big Shoulders Display",Impact,sans-serif}
+.face:nth-child(1){transform:rotateY(0) translateZ(var(--r))}
+.face:nth-child(2){transform:rotateY(60deg) translateZ(var(--r))}
+.face:nth-child(3){transform:rotateY(120deg) translateZ(var(--r))}
+.face:nth-child(4){transform:rotateY(180deg) translateZ(var(--r))}
+.face:nth-child(5){transform:rotateY(240deg) translateZ(var(--r))}
+.face:nth-child(6){transform:rotateY(300deg) translateZ(var(--r))}
+@keyframes spin{to{transform:rotateY(-360deg)}}
+section{padding:60px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(40px,6vw,64px);margin-bottom:10px}
+.lead{color:var(--mute);max-width:52ch;margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px;perspective:900px}
+.card{background:linear-gradient(160deg,#3a1710,#22100b);border:1px solid var(--line);border-radius:8px;padding:26px;transition:transform .15s ease-out,border-color .2s;transform-style:preserve-3d;will-change:transform}
+.card:hover{border-color:var(--gold)}
+.card svg{width:64px;height:64px;transform:translateZ(40px)}
+.card h3{font-size:34px;margin:14px 0 8px;transform:translateZ(24px)}
+.card p{margin:0 0 16px;color:var(--mute);font-size:16px}
+.card a{color:var(--gold);font-weight:600;text-decoration:none}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
+.why h3{font-size:28px;color:var(--gold);margin-bottom:6px}
+.why p{margin:0;color:var(--mute)}
+.contact{background:linear-gradient(160deg,#3a1710,#22100b);border:1px solid var(--line);border-radius:8px;padding:30px;display:grid;gap:14px;max-width:560px}
+.contact p{margin:0}
+.contact small{color:var(--mute)}
+.wafab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:#25d366;color:#06361a;font-weight:600;padding:13px 20px;border-radius:40px;text-decoration:none;box-shadow:0 6px 20px #0008;z-index:5}
+footer{padding:34px 0 80px;color:var(--mute);font-size:15px;border-top:1px solid var(--line)}
+@media (max-width:640px){.ring{--w:136px;--r:200px;height:190px}.stage{height:290px}.face svg{width:60px;height:60px}nav div a:first-child{display:none}}
+@media (prefers-reduced-motion:reduce){.ring{animation:none;transform:rotateY(-20deg)}*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-jacket" viewBox="0 0 100 100"><path d="M35 8L24 12 8 27 3 82 15 85 18 47 21 98H79L82 47 85 85 97 82 92 27 76 12 65 8 57 20 50 32 43 20Z" fill="#e8c27a" stroke="#2a1507" stroke-width="2"/><path d="M50 32V98" stroke="#2a1507" stroke-width="2"/></symbol>
+<symbol id="i-gloves" viewBox="0 0 100 100"><g fill="#e8c27a" stroke="#2a1507" stroke-width="2"><rect x="26" y="8" width="11" height="40" rx="5"/><rect x="39" y="3" width="11" height="45" rx="5"/><rect x="52" y="6" width="11" height="42" rx="5"/><rect x="65" y="14" width="10" height="34" rx="5"/><path d="M26 44H75V70Q75 92 52 94Q30 92 28 72L12 56Q8 50 14 46Q20 44 26 54Z"/></g></symbol>
+<symbol id="i-bag" viewBox="0 0 100 100"><path d="M34 34V24Q34 10 50 10Q66 10 66 24V34" fill="none" stroke="#e8c27a" stroke-width="5"/><rect x="12" y="32" width="76" height="58" rx="8" fill="#e8c27a" stroke="#2a1507" stroke-width="2"/><path d="M12 48H88" stroke="#2a1507" stroke-width="2"/><rect x="44" y="44" width="12" height="12" rx="2" fill="#2a1507"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 100 100"><rect x="8" y="22" width="84" height="60" rx="8" fill="#e8c27a" stroke="#2a1507" stroke-width="2"/><path d="M8 38H92" stroke="#2a1507" stroke-width="2"/><rect x="62" y="48" width="30" height="20" rx="6" fill="#c9974a" stroke="#2a1507" stroke-width="2"/><circle cx="73" cy="58" r="3" fill="#2a1507"/></symbol>
+<symbol id="i-belt" viewBox="0 0 100 100"><rect x="3" y="38" width="94" height="24" rx="5" fill="#e8c27a" stroke="#2a1507" stroke-width="2"/><rect x="38" y="30" width="24" height="40" rx="4" fill="none" stroke="#2a1507" stroke-width="5"/><g fill="#2a1507"><circle cx="76" cy="50" r="2.5"/><circle cx="86" cy="50" r="2.5"/><circle cx="14" cy="50" r="2.5"/></g></symbol>
+<symbol id="i-boot" viewBox="0 0 100 100"><path d="M26 8H54V50Q54 58 66 62L90 70Q96 73 96 80V90H10V8Z" fill="#e8c27a" stroke="#2a1507" stroke-width="2"/><path d="M10 78H96" stroke="#2a1507" stroke-width="3"/><path d="M26 22H54M26 34H54" stroke="#2a1507" stroke-width="2"/></symbol>
+</defs>
+</svg>
+
+<div class="wrap">
+<nav>
+<b>KASH <i>Leather</i> International</b>
+<div><a href="#categories">Categories</a><a href="https://www.instagram.com/daemon9126" target="_blank" rel="noopener">Instagram</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero">
+<h1>KASH LEATHER<span>INTERNATIONAL</span></h1>
+<p>Real leather jackets, gloves, bags and more. Made to order, shipped worldwide, priced for direct buyers and bulk orders.</p>
+<div class="cta">
+<a class="btn" href="#categories">See categories</a>
+<a class="btn ghost" href="https://wa.me/923056537885?text=Hello%20KASH%20Leather%20International%2C%20I%20want%20to%20place%20an%20order." >Order on WhatsApp</a>
+</div>
+<div class="stage" aria-hidden="true"><div class="ring">
+<div class="face"><svg><use href="#i-jacket"/></svg><b>Jackets</b></div>
+<div class="face"><svg><use href="#i-gloves"/></svg><b>Gloves</b></div>
+<div class="face"><svg><use href="#i-bag"/></svg><b>Bags</b></div>
+<div class="face"><svg><use href="#i-wallet"/></svg><b>Wallets</b></div>
+<div class="face"><svg><use href="#i-belt"/></svg><b>Belts</b></div>
+<div class="face"><svg><use href="#i-boot"/></svg><b>Footwear</b></div>
+</div></div>
+</header>
+
+<section id="categories">
+<h2>What we make</h2>
+<p class="lead">Pick a category and message us. We reply with designs, sizes, colours and price.</p>
+<div class="grid" id="grid"></div>
+</section>
+
+<section>
+<h2>Why buy from us</h2>
+<div class="why">
+<div><h3>Real leather</h3><p>Cowhide, sheepskin and goat leather. Tell us what you want and we match the grade to your budget.</p></div>
+<div><h3>Made to your size</h3><p>Send your measurements or a photo of a jacket that fits. We cut and stitch to match.</p></div>
+<div><h3>Your own brand</h3><p>Starting a label? We can add your logo and tags on bulk orders.</p></div>
+<div><h3>Ships worldwide</h3><p>Orders go by courier with tracking, to Europe, the Gulf and beyond.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Place an order</h2>
+<div class="contact">
+<p>Send us the product, size and quantity. We answer on WhatsApp the same day.</p>
+<a class="btn" style="text-align:center" href="https://wa.me/923056537885?text=Hello%20KASH%20Leather%20International%2C%20I%20want%20to%20place%20an%20order.">WhatsApp +92 305 6537885</a>
+<a class="btn ghost" style="text-align:center" href="https://www.instagram.com/daemon9126" target="_blank" rel="noopener">Instagram @daemon9126</a>
+<a class="btn ghost" style="text-align:center" href="mailto:itskash5510@icloud.com">itskash5510@icloud.com</a>
+<small>Samples, prices and delivery time are confirmed before you pay.</small>
+</div>
+</section>
+
+<footer>KASH Leather International. WhatsApp +92 305 6537885. Email itskash5510@icloud.com. Instagram <a href="https://www.instagram.com/daemon9126" target="_blank" rel="noopener">@daemon9126</a>.</footer>
+</div>
+<a class="wafab" href="https://wa.me/923056537885" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+<script>
+(function(){
+  var cats=[
+    ["jacket","Jackets","Biker, bomber, classic and fashion jackets for men and women."],
+    ["gloves","Gloves","Driving, fashion, winter and work gloves in soft leather."],
+    ["bag","Bags","Handbags, backpacks, laptop and travel bags."],
+    ["wallet","Wallets","Slim, bifold and card holders, plus key cases."],
+    ["belt","Belts","Plain, stitched and buckle-style belts for daily use."],
+    ["boot","Footwear","Boots, loafers and sandals, cut from full leather."]
+  ];
+  var g=document.getElementById("grid"),h="";
+  cats.forEach(function(c){
+    var t=encodeURIComponent("Hello KASH Leather International, I am interested in "+c[1]+". Please send designs and prices.");
+    h+='<article class="card"><svg><use href="#i-'+c[0]+'"/></svg><h3>'+c[1]+'</h3><p>'+c[2]+'</p><a href="https://wa.me/923056537885?text='+t+'">Ask about '+c[1].toLowerCase()+'</a></article>';
+  });
+  g.innerHTML=h;
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+  g.querySelectorAll(".card").forEach(function(el){
+    el.addEventListener("pointermove",function(e){
+      var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      el.style.transform="rotateY("+(x*14)+"deg) rotateX("+(-y*14)+"deg)";
+    });
+    el.addEventListener("pointerleave",function(){el.style.transform=""});
+  });
+})();
+</script>
+</body>
+</html>
